@@ -16,8 +16,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "22"
             endingLineNumber = "22"
-            landmarkName = "CityListViewModel"
-            landmarkType = "3">
+            landmarkName = "objectList"
+            landmarkType = "24">
             <Locations>
                <Location
                   uuid = "02A6BDA4-5DF5-49FC-832E-84C6877A34CE - 4de26713cef89c0e"
@@ -64,8 +64,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "23"
             endingLineNumber = "23"
-            landmarkName = "CityListViewModel"
-            landmarkType = "3">
+            landmarkName = "objectList"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -128,7 +128,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "40"
             endingLineNumber = "40"
-            landmarkName = "updateFailed(error:)"
+            landmarkName = "updateRequestCompleted(error:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -366,8 +366,8 @@
             filePath = "Order/Scene/OrderScene/ViewModel/ItemListViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
             landmarkName = "ItemListViewModel"
             landmarkType = "3">
          </BreakpointContent>

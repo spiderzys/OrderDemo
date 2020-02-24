@@ -10,8 +10,9 @@ import Foundation
 
 
 class ItemListViewModel: SingleSectionTableViewModel {
+
   
-    
+    typealias ObjectType = Item
     weak var delegate: TableViewDelegate?
     
     weak var coordinator: OrderSceneCoordinator?

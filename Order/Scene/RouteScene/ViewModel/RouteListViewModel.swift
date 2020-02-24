@@ -11,7 +11,7 @@ import Foundation
 class RouteListViewModel: SingleSectionTableViewModel {
     
     
-    
+    typealias ObjectType = CityRoute
     init(city:City) {
         self.city = city
     }
