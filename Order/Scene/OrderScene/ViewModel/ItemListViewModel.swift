@@ -12,13 +12,13 @@ import Foundation
 class ItemListViewModel: SingleSectionTableViewModel {
     weak var delegate: TableViewDelegate?
     
-    
     weak var coordinator: OrderSceneCoordinator?
     let route: CityRoute
-    
     init(route: CityRoute) {
         self.route = route
     }
+    
+    
     
     var isSigned:Bool {
         return route.signed
@@ -37,11 +37,10 @@ class ItemListViewModel: SingleSectionTableViewModel {
         }
     }
     
-    func adjust(item: Item) {
-        coordinator?.showAdjust(item: item)
-    }
     
     func sign() {
         coordinator?.showSignature(on: route)
     }
+    
+    
 }

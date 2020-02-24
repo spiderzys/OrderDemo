@@ -42,6 +42,9 @@
 		09443FF52403BAD300F8AE64 /* SignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09443FF42403BAD300F8AE64 /* SignViewController.swift */; };
 		09443FF7240408DE00F8AE64 /* Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09443FF6240408DE00F8AE64 /* Canvas.swift */; };
 		09443FF924040A9D00F8AE64 /* SignViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09443FF824040A9D00F8AE64 /* SignViewModel.swift */; };
+		09443FFF2404518F00F8AE64 /* ItemCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09443FFE2404518F00F8AE64 /* ItemCellViewModel.swift */; };
+		095BD3A224045F02003F175D /* ViewModelBinded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095BD3A124045F02003F175D /* ViewModelBinded.swift */; };
+		095BD3A6240467E0003F175D /* RouteListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095BD3A5240467E0003F175D /* RouteListCellViewModel.swift */; };
 		096B691A23FE57D700E9EF9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096B691923FE57D700E9EF9C /* AppDelegate.swift */; };
 		096B692323FE57DA00E9EF9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 096B692223FE57DA00E9EF9C /* Assets.xcassets */; };
 		096B692623FE57DA00E9EF9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 096B692423FE57DA00E9EF9C /* LaunchScreen.storyboard */; };
@@ -93,6 +96,9 @@
 		09443FF42403BAD300F8AE64 /* SignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignViewController.swift; sourceTree = "<group>"; };
 		09443FF6240408DE00F8AE64 /* Canvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Canvas.swift; sourceTree = "<group>"; };
 		09443FF824040A9D00F8AE64 /* SignViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignViewModel.swift; sourceTree = "<group>"; };
+		09443FFE2404518F00F8AE64 /* ItemCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCellViewModel.swift; sourceTree = "<group>"; };
+		095BD3A124045F02003F175D /* ViewModelBinded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBinded.swift; sourceTree = "<group>"; };
+		095BD3A5240467E0003F175D /* RouteListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteListCellViewModel.swift; sourceTree = "<group>"; };
 		096B691623FE57D700E9EF9C /* Order.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Order.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		096B691923FE57D700E9EF9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		096B692223FE57DA00E9EF9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -177,6 +183,7 @@
 			children = (
 				09443FAB2400F43200F8AE64 /* CityListViewModel.swift */,
 				09443FCE2401E39A00F8AE64 /* RouteListViewModel.swift */,
+				095BD3A5240467E0003F175D /* RouteListCellViewModel.swift */,
 				09443FD6240324E400F8AE64 /* MapViewModel.swift */,
 			);
 			path = ViewModel;
@@ -231,6 +238,7 @@
 			children = (
 				09443FE6240342A700F8AE64 /* ItemListViewModel.swift */,
 				09443FF22403962C00F8AE64 /* ItemViewModel.swift */,
+				09443FFE2404518F00F8AE64 /* ItemCellViewModel.swift */,
 				09443FF824040A9D00F8AE64 /* SignViewModel.swift */,
 			);
 			path = ViewModel;
@@ -284,6 +292,7 @@
 			children = (
 				096B692F23FE591E00E9EF9C /* Coordinator.swift */,
 				096B693D23FE5A9D00E9EF9C /* ViewController.swift */,
+				095BD3A124045F02003F175D /* ViewModelBinded.swift */,
 				096B693223FE591E00E9EF9C /* ViewModel.swift */,
 				09443F9A23FF96E300F8AE64 /* NetworkRepository.swift */,
 				09443FB92401B50100F8AE64 /* TableViewDelegate.swift */,
@@ -479,6 +488,7 @@
 				09443FB62401060300F8AE64 /* RouteSceneCoordinator.swift in Sources */,
 				09443FA523FFA01600F8AE64 /* Order.swift in Sources */,
 				09443FD12401EAA800F8AE64 /* MapButton.swift in Sources */,
+				095BD3A224045F02003F175D /* ViewModelBinded.swift in Sources */,
 				09443FAE240101C500F8AE64 /* RouteSceneProtocol.swift in Sources */,
 				096B694A23FE5CD500E9EF9C /* LoginSceneProtocol.swift in Sources */,
 				09443FA223FF9E3F00F8AE64 /* Route.swift in Sources */,
@@ -493,6 +503,7 @@
 				09443FA723FFA28800F8AE64 /* User.swift in Sources */,
 				09443FCD2401DF4100F8AE64 /* UIColor.swift in Sources */,
 				09443FCF2401E39A00F8AE64 /* RouteListViewModel.swift in Sources */,
+				095BD3A6240467E0003F175D /* RouteListCellViewModel.swift in Sources */,
 				096B693323FE591E00E9EF9C /* Coordinator.swift in Sources */,
 				09443F9B23FF96E300F8AE64 /* NetworkRepository.swift in Sources */,
 				09443FE524033EAC00F8AE64 /* OrderSceneProtocol.swift in Sources */,
@@ -506,6 +517,7 @@
 				09443F9723FF406700F8AE64 /* OrderRepository.swift in Sources */,
 				09443FD5240324AD00F8AE64 /* MapViewController.swift in Sources */,
 				096B694623FE5C1400E9EF9C /* LoginCoordinator.swift in Sources */,
+				09443FFF2404518F00F8AE64 /* ItemCellViewModel.swift in Sources */,
 				096B694423FE5B4B00E9EF9C /* LoginViewModel.swift in Sources */,
 				09443FBA2401B50100F8AE64 /* TableViewDelegate.swift in Sources */,
 				09443FA023FF9D5600F8AE64 /* RouteRepository.swift in Sources */,

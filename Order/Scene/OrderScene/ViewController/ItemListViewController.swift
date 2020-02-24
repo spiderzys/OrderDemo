@@ -44,13 +44,10 @@ class ItemListViewController: UITableViewController,OrderSceneVC, ViewModelBinde
      }
      
      override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "order", for: indexPath) as? ItemCell, let item = viewModel?.object(in: indexPath), let viewModel = viewModel else {return UITableViewCell()}
-        cell.configureCell(item: item, isSigned: viewModel.isSigned) { [weak self] in
-            self?.adjust(item: item)
-            
-        }
-         
-         return cell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "order", for: indexPath) as? ItemCell, let viewModel = viewModel else {return UITableViewCell()}
+        cell.viewModel = viewModel.cellViewModel(on: indexPath)
+        cell.viewModel?.isSigned = viewModel.isSigned
+        return cell
      }
      
     
@@ -63,9 +60,7 @@ class ItemListViewController: UITableViewController,OrderSceneVC, ViewModelBinde
         return 50
     }
      
-    func adjust(item: Item) {
-        viewModel?.adjust(item: item)
-    }
+    
     
     @IBAction func sign(_ sender: Any) {
         viewModel?.sign()

@@ -35,9 +35,7 @@ class RouteListViewModel: SingleSectionTableViewModel {
         coordinator?.showOrder(on: Route)
     }
     
-    func showRoute(_ route:CityRoute) {
-        coordinator?.showRoute(route)
-    }
+   
     
     
 }

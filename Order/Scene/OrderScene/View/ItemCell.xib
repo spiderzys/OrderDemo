@@ -67,7 +67,7 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                         <connections>
-                            <action selector="adjust:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="CNk-tE-kRH"/>
+                            <action selector="adjust:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="t4G-Kv-1Ap"/>
                         </connections>
                     </button>
                 </subviews>

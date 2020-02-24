@@ -10,7 +10,11 @@ import UIKit
 
 class RouteListCell: UITableViewCell {
 
-    var accessaryAction: (() -> Void)?
+    var viewModel: RouteListCellViewModel? {
+        didSet {
+            configure()
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,8 +23,8 @@ class RouteListCell: UITableViewCell {
         
     }
     
-    func configure(route: CityRoute, action: (() -> Void)?) {
-        self.accessaryAction = route.signed ? nil : action
+    func configure() {
+        guard let route = viewModel?.object else {return}
         self.detailTextLabel?.text = route.address
         self.textLabel?.text = route.name
         if let button = accessoryView as? MapButton {
@@ -32,7 +36,10 @@ class RouteListCell: UITableViewCell {
     }
     
     @objc func showMap() {
-        accessaryAction?()
+        if viewModel?.object.signed == false {
+            
+        }
+      
     }
     
     

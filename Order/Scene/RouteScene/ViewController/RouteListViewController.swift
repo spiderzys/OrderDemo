@@ -33,10 +33,9 @@ class RouteListViewController: UITableViewController,RouteSceneVC, ViewModelBind
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "route", for: indexPath) as? RouteListCell, let route = viewModel?.object(in: indexPath) else {return UITableViewCell()}
-        cell.configure(route: route, action: {[weak self] in
-            self?.showRoute(route: route)
-        })
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "route", for: indexPath) as? RouteListCell else {return UITableViewCell()}
+        cell.viewModel = viewModel?.cellViewModel(on: indexPath)
+        
         
         return cell
     }
@@ -54,9 +53,6 @@ class RouteListViewController: UITableViewController,RouteSceneVC, ViewModelBind
     }
     
     
-    func showRoute(route: CityRoute) {
-        viewModel?.showRoute(route)
-    }
    
 }
 

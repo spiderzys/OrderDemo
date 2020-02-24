@@ -8,11 +8,9 @@
 
 import UIKit
 
-class ItemCell: UITableViewCell {
+class ItemCell: UITableViewCell, ViewModelBinded {
 
-    @IBAction func adjust(_ sender: Any) {
-        adjustAction?()
-    }
+    
     @IBOutlet weak var adjustButton: UIButton!
     
     @IBOutlet weak var itemTitleLabel: UILabel!
@@ -21,14 +19,27 @@ class ItemCell: UITableViewCell {
     
     @IBOutlet weak var quantityLabel: UILabel!
     
-    var adjustAction:(() -> Void)?
+   
+   
+    @IBAction func adjust(_ sender: Any) {
+        viewModel?.adjust()
+    }
     
-    func configureCell(item: Item, isSigned:Bool, action: (() -> Void)?) {
+    
+    var viewModel: ItemCellViewModel? {
+        didSet {
+            self.configure()
+        }
+    }
+    
+    
+    
+    func configure() {
+        guard let item = viewModel?.item, let viewModel = viewModel else {return}
         itemTitleLabel.text = item.name
         quantityLabel.text = String(item.quantity)
         unitLabel.text = item.spec
-        adjustAction = action
-        adjustButton.isHidden = isSigned
+        adjustButton.isHidden = viewModel.isSigned
     }
     
     
