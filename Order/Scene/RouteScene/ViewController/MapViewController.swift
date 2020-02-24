@@ -24,7 +24,7 @@ class MapViewController: UIViewController, RouteSceneVC, ViewModelBinded {
     func configureUI() {
         self.navigationItem.titleView = searchBar
         searchBar.delegate = self
-        mapView.showRouteOnMap(path: RoutePath.mock)
+        mapView.showRouteOnMap(path:viewModel?.path ?? RoutePath.mock )
     }
     
     

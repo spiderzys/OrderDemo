@@ -25,16 +25,17 @@ struct CityRoute: Codable {
     let address:String
     let cityId: Int
     let signed: Bool
+    let routePath: RoutePath
     
     static var mock = City.mock.map { city in
         [1,2,3,4].map {
-            CityRoute(orderId :city.id * 10 + $0, name: "Route \($0) in city \(city.id)", address: "address",cityId: city.id, signed: $0 <= 2)
+            CityRoute(orderId :city.id * 10 + $0, name: "Route \($0) in city \(city.id)", address: "address",cityId: city.id, signed: $0 <= 2, routePath: RoutePath.mock)
         }
     }.reduce([],+)
     
     static func mockSign(on route:CityRoute) {
         CityRoute.mock = CityRoute.mock.map {
-            $0.orderId == route.orderId ? CityRoute(orderId: $0.orderId, name: $0.name, address: $0.address, cityId: $0.cityId, signed: true) : $0
+            $0.orderId == route.orderId ? CityRoute(orderId: $0.orderId, name: $0.name, address: $0.address, cityId: $0.cityId, signed: true, routePath: $0.routePath) : $0
         }
     }
     

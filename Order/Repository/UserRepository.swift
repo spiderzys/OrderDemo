@@ -11,26 +11,28 @@ import Moya
 final class UserRepository {
     static let shared = UserRepository()
     var currentUser:User?
+    
+    func signOut(completion: ((Error?) -> Void)?) {
+           request(.logout) { (error) in
+               completion?(error)
+           }
+       }
+     
+       
+       func login(name:String, password:String, completion: ((Error?) -> Void)?) {
+           request(.login(name: name, password: password), object: User.self, success: { (user) in
+               self.currentUser = user
+               completion?(nil)
+           }) { (error) in
+               completion?(error)
+           }
+       }
 }
 
 
 extension UserRepository: NetworkRepository {
     
-    func signOut(completion: ((Error?) -> Void)?) {
-        request(.logout) { (error) in
-            completion?(error)
-        }
-    }
-  
-    
-    func login(name:String, password:String, completion: ((Error?) -> Void)?) {
-        request(.login(name: name, password: password), object: User.self, success: { (user) in
-            self.currentUser = user
-            completion?(nil)
-        }) { (error) in
-            completion?(error)
-        }
-    }
+   
    
     typealias RequestEnum = AccessRequest
     enum AccessRequest:TargetType {

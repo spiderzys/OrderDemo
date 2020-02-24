@@ -16,7 +16,9 @@ class MapViewModel: ViewModel {
         self.route = route
     }
     
-    
+    var path:RoutePath {
+        return route.routePath
+    }
 }
 
 
