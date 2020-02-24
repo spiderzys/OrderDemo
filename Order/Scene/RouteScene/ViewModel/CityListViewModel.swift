@@ -10,7 +10,9 @@ import Foundation
 
 
 class CityListViewModel: SingleSectionTableViewModel {
+   
     
+    typealias ObjectType = City
 
     weak var coordinator: RouteSceneCoordinator?
     weak var delegate: TableViewDelegate?

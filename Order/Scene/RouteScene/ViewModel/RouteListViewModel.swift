@@ -10,6 +10,8 @@ import Foundation
 
 class RouteListViewModel: SingleSectionTableViewModel {
     
+    
+    
     init(city:City) {
         self.city = city
     }

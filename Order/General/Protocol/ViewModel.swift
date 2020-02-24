@@ -54,10 +54,15 @@ extension TableViewModel {
 
 
 protocol SingleSectionTableViewModel: TableViewModel {
+    associatedtype ObjectType: Any
     var objectList:[ObjectType] {get}
 }
 
 extension SingleSectionTableViewModel {
+    var sectionSize: Int {
+        return 1
+    }
+    
     func objectCount(in section:Int) -> Int{
         return objectList.count
     }
