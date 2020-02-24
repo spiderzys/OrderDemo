@@ -45,8 +45,9 @@ class ItemListViewController: UITableViewController,OrderSceneVC, ViewModelBinde
      
      override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "order", for: indexPath) as? ItemCell, let viewModel = viewModel else {return UITableViewCell()}
-        cell.viewModel = viewModel.cellViewModel(on: indexPath)
-        cell.viewModel?.isSigned = viewModel.isSigned
+        let itemCellViewModel: ItemCellViewModel? = viewModel.cellViewModel(on: indexPath)
+        itemCellViewModel?.isSigned = viewModel.isSigned
+        cell.viewModel = itemCellViewModel
         return cell
      }
      

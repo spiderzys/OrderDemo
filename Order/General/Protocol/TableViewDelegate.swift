@@ -9,24 +9,25 @@
 import UIKit
 
 
-protocol TableViewDelegate: UIViewController, UITableViewDataSource, UITableViewDelegate {
+protocol TableViewDelegate: UIViewController, UITableViewDataSource, UITableViewDelegate, ViewModelRequestDelegate {
  
     var tableView: UITableView! {get set}
-    func didDataUpdated()
-    func didDateRequestFailed(error:Error?)
+    
  
 }
 
-
-extension TableViewDelegate  {
-    func didDataUpdated() {
-        self.tableView.reloadData()
-    }
-    
-    func didDateRequestFailed(error:Error?) {
-        self.showAlert(title: "cannot get data", message: error?.localizedDescription)
+extension TableViewDelegate {
+    func requestCompleted(error:Error?) {
+        if let error = error {
+            self.showAlert(title: nil, message: error.localizedDescription)
+        }
+        else {
+            self.tableView.reloadData()
+        }
+        
     }
 }
+
 
 
 

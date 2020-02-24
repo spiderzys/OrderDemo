@@ -82,11 +82,6 @@ protocol SingleSectionCellViewModel: NSObject, ViewModel {
     init(object:ObjectType)
 }
 
-extension SingleSectionCellViewModel {
-   // init(object:ObjectType) {
-   //     self.object = object
-  //  }
-}
 
 
 

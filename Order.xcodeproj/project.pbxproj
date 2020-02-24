@@ -169,6 +169,7 @@
 		09443FAA2400F41600F8AE64 /* RouteScene */ = {
 			isa = PBXGroup;
 			children = (
+				09443FB22401051D00F8AE64 /* RouteScene.storyboard */,
 				09443FB52401060300F8AE64 /* RouteSceneCoordinator.swift */,
 				09443FAD240101C500F8AE64 /* RouteSceneProtocol.swift */,
 				09443FAF2401022500F8AE64 /* ViewModel */,
@@ -195,7 +196,6 @@
 				09443FB72401AF7100F8AE64 /* CityListViewController.swift */,
 				09443FBF2401DC9600F8AE64 /* RouteListViewController.swift */,
 				09443FD4240324AD00F8AE64 /* MapViewController.swift */,
-				09443FB22401051D00F8AE64 /* RouteScene.storyboard */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";

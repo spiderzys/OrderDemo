@@ -14,8 +14,3 @@ protocol ViewModelBinded {
   
 }
 
-extension ViewModelBinded where Self: UITableViewCell {
-    mutating func bind(viewModel: ViewModelType) {
-        self.viewModel = viewModel
-    }
-}
