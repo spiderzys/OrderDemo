@@ -23,7 +23,7 @@ extension OrderRepository:NetworkRepository {
     
     func requestOrder(route: CityRoute, completion:(([Item]?, Error?) -> Void)? ) {
         guard let user = UserRepository.shared.currentUser else {return}
-        request(.requestOrder(user: user, route: route), object: [Item].self, success: { itemList in
+        request(.requestOrder(user: user, route: route), success: { itemList in
             completion?(itemList, nil)
         }) { (error) in
             completion?(nil, error)

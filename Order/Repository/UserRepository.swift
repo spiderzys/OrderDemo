@@ -26,13 +26,6 @@ final class UserRepository {
             
         }
         
-        
-        request(.login(name: name, password: password), object: User.self, success: { (user) in
-            self.currentUser = user
-            completion?(nil)
-        }) { (error) in
-            completion?(error)
-        }
     }
 }
 

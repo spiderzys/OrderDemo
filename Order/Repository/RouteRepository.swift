@@ -14,7 +14,7 @@ final class RouteRepository {
     
     func requestCity(completion: (([City]?, Error?) -> Void)? ) {
        
-        request(.city, object: [City].self, success: { (cityList) in
+        request(.city, success: { (cityList) in
             completion?(cityList, nil)
         }) { (error) in
             completion?(nil, error)
@@ -23,7 +23,7 @@ final class RouteRepository {
     
     func requestCityRoute(in city:City,completion: (([CityRoute]?, Error?) -> Void)? ) {
        
-        request(.cityRoute(city: city), object: [CityRoute].self, success: { (routes) in
+        request(.cityRoute(city: city), success: { (routes) in
             completion?(routes, nil)
         }) { (error) in
             completion?(nil, error)
