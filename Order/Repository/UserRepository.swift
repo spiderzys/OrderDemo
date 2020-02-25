@@ -20,11 +20,13 @@ final class UserRepository {
      
        
     func login(name:String, password:String, completion: ((Error?) -> Void)?) {
-        request(.login(name: name, password: password), success: { (user) in
+        
+        self.request(.login(name: name, password: password), success: { (user: User?) in
             self.currentUser = user
-        }) { (error) in
-            
-        }
+            completion?(nil)
+        }, failure: { (error) in
+            completion?(error)
+        })
         
     }
 }

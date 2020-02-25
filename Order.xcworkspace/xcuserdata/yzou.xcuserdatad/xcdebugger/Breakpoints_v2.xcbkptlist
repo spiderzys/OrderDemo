@@ -420,5 +420,101 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C0EAC781-8854-48DF-9231-97573BAFEC12"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Order/General/Protocol/NetworkRepository.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "request(_:callbackQueue:success:failure:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C0EAC781-8854-48DF-9231-97573BAFEC12 - f105296596bfda59"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Moya.Response, Moya.MoyaError&gt;) -&gt; () in (extension in Order):Order.NetworkRepository.request&lt;A where A1: Swift.Decodable&gt;(_: A.RequestEnum, callbackQueue: __C.OS_dispatch_queue, success: Swift.Optional&lt;(A1) -&gt; ()&gt;, failure: Swift.Optional&lt;(Moya.MoyaError) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "Order"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yzou/Downloads/Order/Order/General/Protocol/NetworkRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "439">
+               </Location>
+               <Location
+                  uuid = "C0EAC781-8854-48DF-9231-97573BAFEC12 - f105296596bfda59"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Moya.Response, Moya.MoyaError&gt;) -&gt; () in (extension in Order):Order.NetworkRepository.request&lt;A where A1: Swift.Decodable&gt;(_: A.RequestEnum, callbackQueue: __C.OS_dispatch_queue, success: Swift.Optional&lt;(A1) -&gt; ()&gt;, failure: Swift.Optional&lt;(Moya.MoyaError) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "Order"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yzou/Downloads/Order/Order/General/Protocol/NetworkRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "500">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B9CF54DD-201F-495E-8C95-52FC13E7A9C2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Order/General/Protocol/NetworkRepository.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "request(_:callbackQueue:success:failure:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B9CF54DD-201F-495E-8C95-52FC13E7A9C2 - aa46fdd42f415f08"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in Order):Order.NetworkRepository.request&lt;A where A1: Swift.Decodable&gt;(_: A.RequestEnum, callbackQueue: __C.OS_dispatch_queue, success: Swift.Optional&lt;(A1) -&gt; ()&gt;, failure: Swift.Optional&lt;(Moya.MoyaError) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "Order"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yzou/Downloads/Order/Order/General/Protocol/NetworkRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "335">
+               </Location>
+               <Location
+                  uuid = "B9CF54DD-201F-495E-8C95-52FC13E7A9C2 - f105296596bfda59"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Moya.Response, Moya.MoyaError&gt;) -&gt; () in (extension in Order):Order.NetworkRepository.request&lt;A where A1: Swift.Decodable&gt;(_: A.RequestEnum, callbackQueue: __C.OS_dispatch_queue, success: Swift.Optional&lt;(A1) -&gt; ()&gt;, failure: Swift.Optional&lt;(Moya.MoyaError) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "Order"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yzou/Downloads/Order/Order/General/Protocol/NetworkRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "439">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
