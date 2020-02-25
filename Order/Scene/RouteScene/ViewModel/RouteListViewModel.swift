@@ -29,7 +29,7 @@ class RouteListViewModel: SingleSectionTableViewModel {
             if let routes = routes {
                 self.routes = routes
             }
-            self.updateRequestCompleted(error:error)
+            self.delegate?.requestCompleted(error: error)
         }
     }
     

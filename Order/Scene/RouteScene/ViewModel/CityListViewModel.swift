@@ -37,7 +37,7 @@ class CityListViewModel: SingleSectionTableViewModel {
             if let list = cityList {
                 self.cityList = list
             }
-            self.updateRequestCompleted(error:error)
+            self.delegate?.requestCompleted(error: error)
         }
     }
     

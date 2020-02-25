@@ -17,8 +17,7 @@ protocol TableViewModel: ViewModel {
     func objectCount(in section:Int) -> Int
     var sectionSize: Int {get}
     
-    func updateList()
-    func updateFailed(error:Error?)
+   
     var delegate:TableViewDelegate? { get set }
     
 }
@@ -26,21 +25,7 @@ protocol TableViewModel: ViewModel {
 
 extension TableViewModel {
     
-    func updateList() {
-        delegate?.didDataUpdated()
-    }
-    func updateFailed(error:Error?) {
-        delegate?.didDateRequestFailed(error: error)
-    }
     
-    func updateRequestCompleted(error:Error?) {
-        if let error = error {
-            delegate?.didDateRequestFailed(error: error)
-        }
-        else {
-            delegate?.didDataUpdated()
-        }
-    }
     
     func cellViewModel<T:SingleSectionCellViewModel>(on indexPath: IndexPath) -> T? where T.ObjectType == ObjectType, T.coordinatorType == coordinatorType {
         guard let object = self.object(in: indexPath) else {return nil}

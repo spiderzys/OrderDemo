@@ -36,7 +36,7 @@ class ItemListViewModel: SingleSectionTableViewModel {
     func requestOrder() {
         OrderRepository.shared.requestOrder(route: route) { (list, error) in
             self.itemList = list ?? []
-            self.updateRequestCompleted(error: error)
+            self.delegate?.requestCompleted(error: error)
         }
     }
     

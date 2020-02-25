@@ -20,7 +20,7 @@ class CityListViewController: UITableViewController, RouteSceneVC, ViewModelBind
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel?.requestCity()
-        se()
+        
         
     }
 

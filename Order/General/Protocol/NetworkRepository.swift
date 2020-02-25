@@ -64,4 +64,23 @@ extension NetworkRepository {
         }
     }
     
+    func request<T:Decodable>(_ type: RequestEnum,  callbackQueue: DispatchQueue = .main, success:((T) -> Void)?, failure: ((MoyaError) -> Void)?) {
+        provider.request(type, callbackQueue: callbackQueue) { (result) in
+            switch result {
+            case.success(let response):
+                if let value = try? JSONDecoder().decode(T.self, from: response.data) {
+                    success?(value)
+                }
+                else {
+                    failure?(MoyaError.jsonMapping(response))
+                }
+                
+            case .failure(let error):
+                failure?(error)
+                
+            }
+            
+        }
+    }
+    
 }
